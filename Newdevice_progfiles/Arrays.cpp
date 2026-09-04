@@ -9,4 +9,5 @@ int main(){
     
     std::string laptop_bands[] = {"HP", "Lenovo", "dell"};
     std::cout << laptop_bands[1];
+    std::cout << laptop_bands[0] << '\n';
 }
