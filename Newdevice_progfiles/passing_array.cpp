@@ -1,23 +1,29 @@
 #include <iostream>
 
-double getTotal(double prices[] , int size);
+double gettotal(double prices[] , int size) ;
 
 int main(){
 
-    double prices[] = { 523.12, 660.99, 321.2583, 36.36};
+    double prices[4];
     int size = sizeof(prices)/sizeof(prices[0]);
-    double total = getTotal(prices , size);
+    double total = gettotal(prices , size);
 
-    std::cout << "$" << total << '\n' ;
+    for( int i = 0 ; i < 5 ; i++){
+        std::cout << "enter the price of "<< i+1 << " products in front of you bitch!!" << '\n';
+        std::cin >> prices[i] ; 
+    }
+    
+    std::cout << "Your total  is " << total << "$" ;
+
     return 0;
 }
 
-double getTotal(double prices[] , int size){
+double gettotal(double prices[] , int size){
+    double total = 0 ; 
 
-    double total = 0;
-
-    for(int i = 0 ; i < size; i++){
-        total += prices[i] ;
+    for (int i = 0 ; i < size 
+        ; i++){
+        total += prices[i] ; 
     }
-    return total;
+    return total ;
 }
