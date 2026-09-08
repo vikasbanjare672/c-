@@ -34,4 +34,5 @@ int main(){
     c = sqrt(pow(a,2) + pow(b,2));
     std::cout << "The length of the hypotenuse is: " << c << std::endl;
     return 0;
+    
 }
