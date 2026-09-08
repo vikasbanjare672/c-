@@ -17,7 +17,7 @@ int main(){
 
     switch(random){
         case 1 :
-            if (product == "facewash" || "Facewash") {
+            if (product == "facewash" || product ==  "Facewash") {
                 std::cout << "You have WON Maskara" << '\n' ;
             }
             else{
@@ -26,7 +26,7 @@ int main(){
             break;
 
         case 2 :
-            if (product == "pen" || "Pen") {
+            if (product == "pen" || product == "Pen") {
                 std::cout << "You have WON rubber" << '\n' ;
             }
             else{
@@ -35,7 +35,7 @@ int main(){
             break;
 
         case 3 :
-            if (product == "Mobile" || "mobile") {
+            if (product == "Mobile" || product == "mobile") {
                 std::cout << "You have WON a EARBUD" << '\n' ;
             }
             else{
@@ -44,7 +44,7 @@ int main(){
             break;
 
         case 4 :
-            if (product == "laptop" || "Laptop") {
+            if (product == "laptop" || product == "Laptop") {
                 std::cout << "You have WON a 5000 rupee voucher!!" << '\n' ;
             }
             else{
@@ -53,7 +53,7 @@ int main(){
             break;
 
         case 5 :
-            if (product == "gyat" || "Gyaatttt") {
+            if (product == "gyat" || product == "Gyaatttt") {
                 std::cout << "You have WON a baddie voucher!!" << '\n' ;
             }
             else{
