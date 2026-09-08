@@ -15,7 +15,7 @@ int main(){
         std::cout << "Student name : " << name[i] << '\n'; */
 
     for(int i = 0 ; i < sizeof(grades)/sizeof(char); i++){
-        std::cout << "Student grade : " << grades[i] << '\n';
+        std::cout << "Student grade : " << grades[i++] << '\n';
     }
 
     return 0 ;
