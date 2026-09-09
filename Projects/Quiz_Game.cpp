@@ -1,5 +1,5 @@
 #include <iostream>
-
+#include <iomanip>
 int main(){
 
     std::string questions[] = {"1. In which year C++ is developed ??",
@@ -16,7 +16,7 @@ int main(){
 
     int size = sizeof(questions)/sizeof(questions[0]);
     char guess;
-    int score;
+    int score = 0;
 
     for (int i = 0 ; i < size ; i++){
 
@@ -25,25 +25,28 @@ int main(){
         std::cout << "********************************\n";
 
         for(int j = 0 ; j < sizeof(options[i])/sizeof(options[i][0]) ; j++){
-            std::cout << options[i][j] << " ";
+            std::cout << options[i][j] << '\n';
         }
-        std::cout <<  '\n';
         std::cout << "Your Answer : ";
         std::cin >> guess ;
         guess = toupper(guess);
+        std::cout << '\n';
 
         if(guess == anskey[i]){
-            std::cout << "Correct " << '\n';
+            std::cout << "CORRECT " << '\n';
             score++;
         }
         else{
-            std::cout << "Wrong!!" << '\n';
-           std::cout << "Correct ans : " << anskey[i]; 
+            std::cout << "WRONG!!\n";
+           std::cout << "ANSWER : " << anskey[i] << '\n'; 
         }
-        std::cout << "Correct Answers : " << score << '\n';
-        std::cout << "Your Score : " << (score/double(size))*100 << " % " << "Correct!" << '\n';
-
     }
+    std::cout << "********************************\n";
+    std::cout << "************ RESULT ************\n";
+    std::cout << "********************************\n";
+    std::cout << "CORRECT GUESSES : " << score << '\n';
+    std::cout << "# OF QUESTIONS : " << size << '\n';
+    std::cout << "Your Score : " << std::fixed << std::setprecision(2) << (score * 100.0 / size) << " %" << " CORRECT!" << '\n';
 
     return 0;
 }
