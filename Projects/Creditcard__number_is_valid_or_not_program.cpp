@@ -8,11 +8,53 @@
 // 4. Sum results from steps 2 & 3
 // 5. If step 4 is divisble by 10, # is valid
 
-
+int getDigit(const int number);
+int sumOddDigit(const std::string cardNumber);
+int sumevenDigit(const std::string cardNumber);
 
 int main(){
 
+    std::string number ;
+    int result = 0;
 
+    std::cout << "Enter Your Card Number: " ;
+    std::cin >> number;
+    
+    result = sumOddDigit(number) + sumevenDigit(number) ; 
+
+    if (result % 10 == 0){
+        std::cout << number << "Is Valid" ;
+    }
+    else {
+        std::cout << number << "Is NOT Valid!! " ;
+    }
 
     return 0;
 }
+
+int getDigit(const int number){
+
+    return  number % 10 + (number/10 % 10);
+}
+
+int sumOddDigit(const std::string cardNumber){
+    
+    int sum = 0 ;
+    
+    for (int i = cardNumber.size() - 1 ; i <= 0 ; i-=2){
+        sum += cardNumber[i] - '0';
+    }
+
+    return sum ;  
+}
+
+int sumevenDigit(const std::string cardNumber){
+    
+    int sum = 0 ;
+    
+    for (int i = cardNumber.size() - 2 ; i <= 0 ; i-=2){
+        sum += getDigit((cardNumber[i] - '0')*2);
+    }
+
+    return sum ;
+}   
