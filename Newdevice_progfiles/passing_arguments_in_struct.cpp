@@ -6,7 +6,8 @@ struct phone{
     std::string color;
 };
 
-void printout(phone phone);
+void printout(phone &phone);
+void changecolor(phone &phone , std::string color);
 
 int main(){
 
@@ -25,13 +26,23 @@ int main(){
     printout(phone1);
     printout(phone2);
 
+    changecolor(phone1 , "HOT");
+    changecolor(phone2 , "HOT");
+
+    printout(phone1);
+    printout(phone2);
+
 
     return 0;
 }
 
-void printout(phone phone){
+void printout(phone &phone){
     std::cout << phone.model << '\n';
     std::cout << phone.year << '\n';
     std::cout << phone.color << '\n';
     std::cout << '\n';
+}
+
+void changecolor(phone &phone , std::string color){
+    phone.color = color;
 }
