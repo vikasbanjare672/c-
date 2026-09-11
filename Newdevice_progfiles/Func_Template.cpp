@@ -7,3 +7,7 @@ int main(){
     std::cout << max(1 ,2.1) << '\n';
     return 0;
 }
+
+// function template = describes what a function looks like.
+//                     can be used to generate as many overloaded function as needed 
+//                     each using different data types........
