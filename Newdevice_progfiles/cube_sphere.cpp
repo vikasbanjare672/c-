@@ -26,7 +26,7 @@ class Sphere : public shape{
     }
 };
 
-int main(){
+
 int main(){
 
     Cube cube(10);
@@ -39,5 +39,5 @@ int main(){
     std::cout << "Volume: " << sphere.volume << "cm\n";
 
     return 0;
-}
+
 }
