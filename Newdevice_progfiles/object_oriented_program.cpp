@@ -33,6 +33,15 @@ int main(){
 
     human1.sleep();
 
+    Human human2;
+    human2.name = "Rick";
+    human2.occupation = "Scientist";
+    human2.age = 56;
+
+    std::cout << human2.name << '\n';
+    std::cout << human2.occupation << '\n';
+    std::cout << human2.age << '\n';
+
 
 
     return 0;
